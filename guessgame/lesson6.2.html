@@ -11,13 +11,13 @@
         function vote() {
             let t = "You love ";
             let c = ", good choice!"
-            for (i = 0; i < document.myform.colors.length; i++) {
-                if (document.myform.colors[i].checked == true) {
-                    t = t + document.myform.colors[i].value + c;
+            for (i = 0; i < document.myform.drinks.length; i++) {
+                if (document.myform.drinks[i].checked == true) {
+                    t = t + document.myform.drinks[i].value + c;
                 }
             }
             if (t == "You love ") {
-                document.getElementById("txt").value = "Choose a color";
+                document.getElementById("txt").value = "Choose a drink";
             } else {
                 document.getElementById("txt").value = t;
                 document.getElementById("txt1").value = t;
@@ -32,10 +32,10 @@
             document.getElementById("txt").value = x.toUpperCase();
         }
         function SayHello() {
-            console.log("Your mouse is over the text!");
+            console.log("Your love is over the text!");
         }
         function SayGoodbye() {
-            console.log("Your mouse has left the text!");
+            console.log("Your mom has left the text!");
         }
         function init() {
             let loc = window.location.href;
@@ -53,15 +53,15 @@
     <h3>CIW Advanced HTML5 and CSS3 Specialist</h3>
     <hr/>
     <h4>Event Handler Examples</h4>
-    Vote for your favorite color:
+    Vote for your favorite drink:
     <form name="myform">
-        <input type="radio" name="colors" value="Black"/>Black<br>
-        <input type="radio" name="colors" value="Baby Blue">Baby Blue<br>
-        <input type="radio" name="colors" value="Light Pink"/>Light Pink<br>
-        <input type="radio" name="colors" value="Lavender"/>Lavender<br>
-        <input type="radio" name="colors" value="Scarlet" />Scarlet<br>
-        <input type="radio" name="colors" value="Gold" />Gold<br>
-        <input type="radio" name="colors" value="White"/>White<br>
+        <input type="radio" name="drinks" value="tea"/>tea<br>
+        <input type="radio" name="drinks" value="lemonade">lemonade<br>
+        <input type="radio" name="drinks" value="sprite"/>sprite<br>
+        <input type="radio" name="drinks" value="pepsi"/>pepsi<br>
+        <input type="radio" name="drinks" value="monster" />monster<br>
+        <input type="radio" name="drinks" value="redbull" />redbull<br>
+        <input type="radio" name="drinks" value="coffee"/>coffee<br>
         <p><input type="button" value="VOTE" onclick="vote()" /> <input type="reset" value="RESET" /></p>
         <p><input type="text" id="txt" size="40" onblur="upperCase()" /> Click in then out!</p>
         <p><input type="text" id="txt1" size="40" onmouseover="SayHello()" /> Hover over this field!</p>
